@@ -1,20 +1,20 @@
-<h1>Cadastrar Funcionário</h1>
-<form action="">
+<h1>Cadastrar Usuario</h1>
+
+<form [formGroup]="usuarioForm" (ngSubmit)="submit()" #formDit="ngForm">
+    
     <div class="input_box">
         <label for="">Nome</label>
-        <input type="text" formControllName ="nome" placeholder="Digite seu nome" required>
+        <input type="text" formControlName ="name" placeholder="Digite seu nome" required>
     </div>
     
-    <form action="">
         <div class="input_box">
             <label for="">E-mail</label>
-            <input type="text" formControllName ="nome" placeholder="Digite seu nome" required>
+            <input type="text" formControlName ="email" placeholder="Digite seu e-mail" required>
         </div>
 
-    <form action="">
         <div class="input_box">
             <label for="">Senha</label>
-            <input type="text" formControllName ="nome" placeholder="Digite seu nome" required>
+            <input type="text" formControlName ="senha" placeholder="Digite sua senha" required>
         </div>
         
     <div class="button-box">
