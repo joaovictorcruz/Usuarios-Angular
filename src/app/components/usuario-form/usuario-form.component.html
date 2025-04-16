@@ -1,0 +1,31 @@
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+    <h1>Cadastrar</h1>
+    <div class="input_box">
+      <label for="">Nome</label>
+      <input type="text" formControlName="name" placeholder="Digite seu nome" required>
+      <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched" class="error">
+        Nome é obrigatório
+      </div>
+    </div>
+  
+    <div class="input_box">
+      <label for="">E-mail</label>
+      <input type="email" formControlName="email" placeholder="Digite seu e-mail" required>
+      <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched" class="error">
+        E-mail inválido
+      </div>
+    </div>
+  
+    <div class="input_box">
+      <label for="">Senha</label>
+      <input type="password" formControlName="senha" placeholder="Digite sua senha" required>
+      <div *ngIf="form.get('senha')?.invalid && form.get('senha')?.touched" class="error">
+        Senha deve ter no mínimo 6 caracteres
+      </div>
+    </div>
+  
+    <div class="button-box">
+      <button type="submit" [disabled]="form.invalid">Cadastrar</button>
+    </div>
+  </form>
+  

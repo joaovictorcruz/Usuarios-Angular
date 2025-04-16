@@ -1,22 +1,24 @@
 :host {
+    display: block;
+    min-height: 100vh;
+    background-color: #121212; /* Cor de fundo escuro para o componente */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #121212;
   }
   
   form {
     width: 100%;
-    max-width: 400px;
-    background-color: #1f1f1f;
+    max-width: 420px;
     padding: 2rem;
+    background-color: #1f1f1f; /* Fundo escuro e profissional para o formulário */
     border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
   }
   
   h1 {
@@ -61,7 +63,7 @@
   
   button[type="submit"] {
     padding: 0.7rem 2rem;
-    background-color: #4a90e2;
+    background-color: #4a90e2; 
     color: white;
     border: none;
     border-radius: 8px;
@@ -71,6 +73,6 @@
   }
   
   button[type="submit"]:hover {
-    background-color: #200541;
+    background-color: #11194b; 
   }
   

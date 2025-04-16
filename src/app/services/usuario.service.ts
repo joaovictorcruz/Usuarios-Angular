@@ -10,11 +10,14 @@ import { Observable } from 'rxjs';
 })
 export class UsuarioService {
 
-  private apiUrl = `${environment.apiUrl}/Usuario`
+  private apiUrl = `${environment.apiUrl}/Usuario`;
   constructor( private http: HttpClient ) {  }
 
   CreateUsuario(usuario: Usuario) : Observable<Response<Usuario[]>>{
-    return this.http.post<Response<Usuario[]>>(`${this.apiUrl}`, usuario);
+    return this.http.post<Response<Usuario[]>>(this.apiUrl, usuario);
   }
-  
-}  
+
+  LoginUsuario(credenciais: { email: string; senha: string }) {
+    return this.http.post<any>(`${this.apiUrl}/login`, credenciais);
+  }  
+}   
