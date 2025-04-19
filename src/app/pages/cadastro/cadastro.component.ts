@@ -8,10 +8,9 @@ import { Router } from '@angular/router';
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
   styleUrls: ['./cadastro.component.css'],
-  standalone: false
+  standalone: false,
 })
 export class CadastroComponent implements OnInit {
-
   usuarioForm!: FormGroup;
 
   constructor(private usuarioService: UsuarioService, private router: Router) {}
@@ -21,7 +20,10 @@ export class CadastroComponent implements OnInit {
       id: new FormControl(0),
       name: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
-      senha: new FormControl('', [Validators.required, Validators.minLength(6)])
+      senha: new FormControl('', [
+        Validators.required,
+        Validators.minLength(6),
+      ]),
     });
   }
 
@@ -31,12 +33,13 @@ export class CadastroComponent implements OnInit {
     const usuario: Usuario = this.usuarioForm.value;
     this.usuarioService.CreateUsuario(usuario).subscribe({
       next: () => {
-        console.log("Usuário criado com sucesso");
+        console.log('Usuário criado com sucesso');
         this.router.navigate(['login']);
       },
       error: (err) => {
-        console.error("Erro ao criar:", err);
-      }
+        console.log(err);
+        console.error('Erro ao criar:', err);
+      },
     });
   }
 }
