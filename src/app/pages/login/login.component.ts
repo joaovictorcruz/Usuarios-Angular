@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
     this.usuarioService.LoginUsuario(credenciais).subscribe({
       next: (res) => {
         if (res.sucesso) {
-          this.router.navigate(['sucess']);
+          this.router.navigate(['home']);
         } else {
           this.erroLogin = res.mensagem || 'E-mail ou senha incorretos';
         }

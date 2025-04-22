@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { LoginComponent } from './pages/login/login.component'; 
-import { SucessComponent } from './pages/sucess/sucess.component';
+import { HomeComponent } from './pages/home/home.component';
+import { EditarComponent } from './pages/editar/editar.component';
 
 const router: Routes = [
   {path: '', component: CadastroComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'sucess', component: SucessComponent} 
+  {path: 'home', component: HomeComponent}, 
+  {path: 'editar/:id', component: EditarComponent} 
 ];
 
 @NgModule({

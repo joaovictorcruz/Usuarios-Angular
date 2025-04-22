@@ -1,5 +1,5 @@
 <form [formGroup]="form" (ngSubmit)="submitForm()">
-    <h1>Cadastrar</h1>
+    <h1>{{ titulo }}</h1>
     <div class="input_box">
       <label for="">Nome</label>
       <input type="text" formControlName="name" placeholder="Digite seu nome" required>
@@ -25,7 +25,7 @@
     </div>
   
     <div class="button-box">
-      <button type="submit" [disabled]="form.invalid">Cadastrar</button>
+      <button type="submit" [disabled]="form.invalid">{{textoBotao}}</button>
     </div>
   </form>
   

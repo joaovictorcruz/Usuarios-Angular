@@ -20,4 +20,20 @@ export class UsuarioService {
   LoginUsuario(credenciais: { email: string; senha: string }) {
     return this.http.post<any>(`${this.apiUrl}/login`, credenciais);
   }  
+
+  getUsuarios() {
+    return this.http.get<Usuario[]>(this.apiUrl);
+  }
+  
+  deletarUsuario(id: number) {
+    return this.http.delete(`${this.apiUrl}/${id}`);
+  }
+  
+  getUsuarioPorId(id: number) {
+    return this.http.get<Usuario>(`${this.apiUrl}/${id}`);
+  }
+  
+  atualizarUsuario(id: number, usuario: Usuario) {
+    return this.http.put(`${this.apiUrl}/${id}`, usuario);
+  }
 }   

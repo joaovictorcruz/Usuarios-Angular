@@ -9,8 +9,11 @@ import { FormGroup } from '@angular/forms';
 })
 export class UsuarioFormComponent {
   @Input() form!: FormGroup;
-  @Output() onSubmit = new EventEmitter<void>();
+  @Input() titulo: string = 'Cadastrar';
+  @Input() textoBotao: string = 'Cadastrar';
 
+  @Output() onSubmit = new EventEmitter<void>();
+  
   submitForm(): void {
     this.onSubmit.emit();
   }

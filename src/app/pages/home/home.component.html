@@ -1,0 +1,16 @@
+<div class="home-container">
+    <h1>Usuários Cadastrados</h1>
+  
+    <div class="card-grid">
+      <div class="card" *ngFor="let usuario of usuarios">
+        <p><strong>Nome:</strong> {{ usuario.name }}</p>
+        <p><strong>Email:</strong> {{ usuario.email }}</p>
+  
+        <div class="actions">
+          <button class="edit-btn" (click)="editarUsuario(usuario.id)">✏️</button>
+          <button class="delete-btn" (click)="deletarUsuario(usuario.id)">🗑️</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

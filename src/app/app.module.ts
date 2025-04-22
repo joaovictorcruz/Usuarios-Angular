@@ -10,7 +10,8 @@ import { AppComponent } from './app.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { LoginComponent } from './pages/login/login.component';
 import { UsuarioFormComponent } from './components/usuario-form/usuario-form.component';
-import { SucessComponent } from './pages/sucess/sucess.component';
+import { HomeComponent } from './pages/home/home.component';
+import { EditarComponent } from './pages/editar/editar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SucessComponent } from './pages/sucess/sucess.component';
     CadastroComponent,
     LoginComponent,
     UsuarioFormComponent,
-    SucessComponent
+    HomeComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,
